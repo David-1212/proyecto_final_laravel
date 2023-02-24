@@ -8,7 +8,9 @@
 </head>
 <body>
     <h1>Listado de productos</h1>
+
     <ul>
+
         @foreach($productos as $m)
             <li>{{$m->nombre_producto}}</li>
         @endforeach
