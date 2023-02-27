@@ -16,12 +16,27 @@ class ProductoController extends Controller
         return view('productos.index-productos',compact('productos'));
     }
 
+
+    public function agregar(){/**ESTA FUNCION MANDA LLAMAR A EL FORMULARIO CON LA VISTA. */
+        return view('productos.agregar');
+    }
+    
+    public function recibe_form(Request $request){
+
+        $request -> validate([
+            'nombrep' => 'required',
+            'precio' => 'required',
+            'descripcion' => 'required',
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        //
+       
+
     }
 
     /**

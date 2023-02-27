@@ -17,5 +17,8 @@ use App\Http\Controllers\ProductoController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('producto', [ProductoController::class, 'index']);
+Route::get('/productos', [ProductoController::class, 'index']);
+Route::get('/agregar', [ProductoController::class, 'agregar']);
+Route::post('/recibe_form', [ProductoController::class, 'recibe_form']);
+
 

@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Listado de productos</h1>
-
+   
+    <h2>Listado de productos</h2>
     <ul>
 
         @foreach($productos as $m)
@@ -16,4 +16,4 @@
         @endforeach
     </ul>
 </body>
-</html>
+</html> 
