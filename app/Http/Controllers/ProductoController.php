@@ -49,9 +49,9 @@ class ProductoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Producto $producto)
+    public function show(Producto $productos)
     {
-        return view ('producto.index-productos');
+        return view ('productos.index-productos',compact('productos'));
     }
 
     /**
