@@ -9,10 +9,13 @@
 <body>
    
     <h2>Listado de productos</h2>
+    <a href="/producto/create">Agregar Producto</a><br>
     <ul>
 
         @foreach($productos as $m)
             <li>{{$m->nombre_producto}}</li>
+            <a href="/producto/{{ $m -> id }}">Ver detalle</a>
+            <a href="/producto/{{ $m -> id }}/edit">Editar</a>
         @endforeach
     </ul>
 </body>

@@ -7,12 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- --------------------------------------------------------------------------------------->
-    <h1>Agregar productos</h1>
-    <form action="/store"method="POST">
+<h1>Editar productos</h1>
+    <form action="/producto/{{$producto->id}}"method="POST">
         @csrf
         <label for="nombrep">Nombre del producto:</label><br>
-        <input type="text" name="nombrep" id= "nombrep">
+        <input type="text" name="nombrep" id= "nombrep" value= "">
         @error('nombrep')
             <i>{{$message}}</i>
         @enderror
@@ -28,7 +27,5 @@
 
         <input type="submit" value="Enviar">
     </form>
-
- <!-- --------------------------------------------------------------------------------------->
 </body>
 </html>

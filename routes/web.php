@@ -17,8 +17,11 @@ use App\Http\Controllers\ProductoController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/productos', [ProductoController::class, 'index']);
-Route::get('/agregar', [ProductoController::class, 'agregar']);
-Route::post('/create', [ProductoController::class, 'create']);
+//Route::get('/productos', [ProductoController::class, 'index']);
+//Route::get('/create', [ProductoController::class, 'create']);
+//Route::post('/store', [ProductoController::class, 'store']);
+
+Route::resource('producto', ProductoController::class);
+
 
 

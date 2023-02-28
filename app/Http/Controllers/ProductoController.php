@@ -16,13 +16,22 @@ class ProductoController extends Controller
         return view('productos.index-productos',compact('productos'));
     }
 
-
-    public function agregar(){/**ESTA FUNCION MANDA LLAMAR A EL FORMULARIO CON LA VISTA. */
-        return view('productos.agregar');
-    }
     
     public function create (Request $request){
 
+        return view('productos.agregar');
+    }
+      
+
+    /**
+     * Show the form for creating a new resource.
+     */
+   
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
         $request -> validate([
             'nombrep' => 'required',
             'precio' => 'required',
@@ -36,26 +45,13 @@ class ProductoController extends Controller
 
         return redirect('/productos');
     }
-      
-
-    /**
-     * Show the form for creating a new resource.
-     */
-   
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
      */
     public function show(Producto $producto)
     {
-        //
+        return view ('producto.index-productos');
     }
 
     /**
@@ -63,7 +59,7 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        //
+        return view ('productos.edit-producto');
     }
 
     /**
