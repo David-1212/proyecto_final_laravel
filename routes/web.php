@@ -19,6 +19,6 @@ Route::get('/', function () {
 });
 Route::get('/productos', [ProductoController::class, 'index']);
 Route::get('/agregar', [ProductoController::class, 'agregar']);
-Route::post('/recibe_form', [ProductoController::class, 'recibe_form']);
+Route::post('/create', [ProductoController::class, 'create']);
 
 

@@ -9,7 +9,7 @@
 <body>
     <!-- --------------------------------------------------------------------------------------->
     <h1>Agregar productos</h1>
-    <form action="/recibe_form"method="POST">
+    <form action="/create"method="POST">
         @csrf
         <label for="nombrep">Nombre del producto:</label><br>
         <input type="text" name="nombrep" id= "nombrep">

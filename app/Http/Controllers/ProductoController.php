@@ -21,24 +21,27 @@ class ProductoController extends Controller
         return view('productos.agregar');
     }
     
-    public function recibe_form(Request $request){
+    public function create (Request $request){
 
         $request -> validate([
             'nombrep' => 'required',
             'precio' => 'required',
             'descripcion' => 'required',
         ]);
+        $producto = new producto();
+        $producto->nombre_producto = $request->nombrep; 
+        $producto->precio = $request->precio; 
+        $producto->descripcion = $request->descripcion; 
+        $producto->save();
+
+        return redirect('/productos');
     }
+      
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-       
-
-    }
-
+   
     /**
      * Store a newly created resource in storage.
      */
